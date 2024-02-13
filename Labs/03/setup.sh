@@ -6,9 +6,9 @@ suffix=${guid//[-]/}
 suffix=${suffix:0:18}
 
 # Set the necessary variables
-RESOURCE_GROUP="dp-3007-${suffix}"
+RESOURCE_GROUP="rg-dp3007-l${suffix}"
 RESOURCE_PROVIDER="Microsoft.MachineLearning"
-REGIONS=("eastus")
+REGIONS=("eastus" "westus" "centralus" "northeurope" "westeurope")
 RANDOM_REGION=${REGIONS[$RANDOM % ${#REGIONS[@]}]}
 WORKSPACE_NAME="mlw-dp3007-l${suffix}"
 COMPUTE_INSTANCE="ci${suffix}"
