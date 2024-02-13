@@ -6,11 +6,11 @@ suffix=${guid//[-]/}
 suffix=${suffix:0:18}
 
 # Set the necessary variables
-RESOURCE_GROUP="rg-dp100-l${suffix}"
+RESOURCE_GROUP="dp-3007-${suffix}"
 RESOURCE_PROVIDER="Microsoft.MachineLearning"
 REGIONS=("eastus")
 RANDOM_REGION=${REGIONS[$RANDOM % ${#REGIONS[@]}]}
-WORKSPACE_NAME="mlw-dp100-l${suffix}"
+WORKSPACE_NAME="mlw-dp3007-l${suffix}"
 COMPUTE_INSTANCE="ci${suffix}"
 COMPUTE_CLUSTER="aml-cluster"
 
